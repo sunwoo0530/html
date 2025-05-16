@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url(images/회원가입배경.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-size: 1.2em;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2f4156;
+        }
+
+        fieldset {
+        background-color: white;
+        border: 3px outset lightgray;
+        width: 350px;
+        text-align: left;
+        padding: 40px;
+        margin: auto;
+        }
+
+        legend {
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        input[type=text],input[type=tel] {
+            border: 2px solid #525252;
+            border-radius: 5px;
+            width: 70%;
+            padding: 10px 10px;
+            margin: 3px 30px 15px 30px;       
+        }
+
+        input[type=text]:hover,input[type=tel]:hover {
+            background-color: #c8d9e6;
+        }
+
+        input[type=text]:focus,input[type=tel]:focus {
+            background-color: #c8d9e6;
+        }
+        
+        input[type=radio]{
+            margin: 0px 10px 5px 30px;       
+        }
+
+        label, p {
+            margin: 0px 30px;
+            color: #3c3b3b;
+        }
+
+        .music1 {
+            margin: 0px 30px;
+            color: #3c3b3b;
+        }
+
+        .music2 {
+            margin: 0px 60px;
+            color: #3c3b3b;
+        }
+
+        input[type=submit] {
+            font-size: 1.0em;
+            background-color: #5399cf;
+            border: none;
+            border-radius: 5px;
+            color:white;
+            padding:5px 30px;
+            margin: 0px 110px;
+        }
+        
+        select {
+            margin: 10px 30px;
+            padding: 5px;
+            font-size: 0.9em;
+        }
+
+        input[type=checkbox] {
+            margin: 0px 30px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <h1>회원가입</h1>
+
+
+            <form method="post" action="process.jsp">
+            <fieldset>
+
+            <legend>회원 정보 입력</legend>
+
+            <label for="id">아이디</label><br>
+            <input type="text" id="id" name="id" placeholder="아이디" required focused><br>
+
+
+            <label for="email">이메일</label><br>
+            <input type="text" id="email" name="email" placeholder="이메일" required><br>
+
+            <label for="password">비밀번호</label><br>
+            <input type="text" id="password" name="password" placeholder="비밀번호" required><br>
+
+            <label for="tel">전화번호</label><br>
+            <input type="tel" id="tel" name="tel" placeholder="예시: 01012341234" required><br>
+
+
+            <p>성별 :</p>
+            <input type="radio" name="gender">남성<br>
+            <input type="radio" name="gender" checked>여성<br><br>
+
+            <p>가장 선호하는 장르</p>
+            <select>
+            <option>Kpop</option>            
+            <option>팝송</option>
+            <option>발라드</option>   
+            <option>락</option>
+            <option>R&B</option>
+            <option>인디</option>
+            </select><br><br>
+
+            
+            <input type="checkbox" name="check" required>이용약관<br>
+            <input type="checkbox" name="check" required>개인정보 수집 동의<br><br>
+
+
+            <input type="Submit" value="가입하기" onclick="alert('제출하시겠습니까?')">
+            </fieldset>
+
+            
+        </form>
+
+
+
+
+</body>
+
+</html>
