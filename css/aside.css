@@ -1,32 +1,32 @@
 
-nav{
+aside nav{
     border-right: 1px solid gray;
     position: fixed;
     left: 0px;
     top: 0px;
+    margin-top: px;
 }
-nav ul{
+aside nav ul{
     list-style: none;
     font-size: 15px;
     padding: 0px;
     
 }
-nav li{
+aside nav li{
     border-top: none;
     padding: 15px;
-    width: 201px;
+    width: 200px;
     font-size: 20px;
 }
-nav a{
+aside nav a{
     text-decoration: none;
     color: black;
 }
-nav .line{
+aside nav .line{
     color: white;
     height: 100vh;
 }
-.title{
-    text-align: center;
-    line-height: 35px;
-    font-size: 30px;
+.login{
+    display: flex;
 }
+

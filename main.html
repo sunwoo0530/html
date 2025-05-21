@@ -4,14 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>main</title>
-	<link type="text/css" rel="stylesheet" href="css/nav.css">
+	<link type="text/css" rel="stylesheet" href="css/aside.css">
 	<link type="text/css" rel="stylesheet" href="css/slider.css">
 	<link type="text/css" rel="stylesheet" href="css/audio.css">
 	<link type="text/css" rel="stylesheet" href="css/header.css">
 	<style>
 		*{
 			margin: 0px;
-			
+			box-sizing: border-box;
     		white-space: nowrap;
 		}
 		.content{
@@ -21,33 +21,37 @@
 </head>
 <body>
 	<header>
-		<a class="mypage" href="">마이페이지</a>
-		<a class="notice" href="">공지사항</a>
-		<a class="faq" href="FAQ.html">FAQ</a>
-		<input class="search" type="search">
-		<a class="login" href="로그인.html" target="_black">로그인</a>
+		<div></div>
+		<nav>
+			<ul>
+				<li><input class="search" type="search"></li>
+				<li><a class="mypage" href="">마이페이지</a></li>
+				<li><a class="notice" href="">공지사항</a></li>
+				<li><a class="faq" href="FAQ.html">FAQ</a></li>
+				<li><a class="login" href="로그인.html" target="_black">로그인</a></li>
+			</ul>
+		</nav>
 	</header>
 
-	<nav>
-		<ul>
-			<li class="title">제목</li>
-			<li class="home"><a href="" target="_self">홈</a></li>
-			<li><a href="">인기음악</a></li>
-			<li><a href="">최신음악</a></li>
-			<li><a href="">가수</a></li>
-			<li><a href="">뮤직비디오</a></li>
-		</ul>
-		<div class="line">line</div>
-		
-	</nav>
-
 	<aside>
+		<nav>
+			<ul>
+				<li class="logo">🎵 MusicStream</li>
+				<li class="home"><a href="" target="_self">홈</a></li>
+				<li><a href="">인기음악</a></li>
+				<li><a href="">최신음악</a></li>
+				<li><a href="">가수</a></li>
+				<li><a href="">뮤직비디오</a></li>
+			</ul>
+			<div class="line">line</div>
+		</nav>
+
 		<div class="audio-player">
 		  	<div class="icon">🎵</div>
 
 		  	<div class="track-info">
-		    	<strong>Epic Cinematic</strong>
-		    	<span>AudioPizza</span>
+		    	<strong>Music Name</strong>
+		    	<span>Singer</span>
 		  	</div>
 
 			<div class="controls">
@@ -67,6 +71,8 @@
 			</div>
 		</div>
 	</aside>
+
+	<hr>
 
 	<main>
 		<div class="slider">
