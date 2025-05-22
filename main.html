@@ -8,15 +8,70 @@
 	<link type="text/css" rel="stylesheet" href="css/slider.css">
 	<link type="text/css" rel="stylesheet" href="css/audio.css">
 	<link type="text/css" rel="stylesheet" href="css/header.css">
+	<link type="text/css" rel="stylesheet" href="css/chart.css">
+	<link type="text/css" rel="stylesheet" href="css/footer.css">
 	<style>
 		*{
 			margin: 0px;
 			box-sizing: border-box;
     		white-space: nowrap;
 		}
-		.content{
-			margin-left: 270px;
+		
+		.maintitle{
+			margin-left: 250px;
+			display: flex;
+    		list-style: none;
+    		align-items: center;
+			justify-content: space-between;
+			padding: 20px;
+			font-size: 1.7em;
+			color: black;
 		}
+		.maintitle a{
+			text-decoration: none;
+			font-size: 18px;
+			margin-left: 570px;
+			transform: translateX(color);
+		}
+		.maintitle a:link{
+			color: black;
+		}
+		.maintitle a:hover{
+			transition: color 0.2s;
+			color: red;
+		}
+		.maintitle a span:hover{
+			color: black;
+		}
+		.list ul{
+			margin-left: 250px;
+			list-style: none;
+			display: flex;
+      		align-items: center;
+      		justify-content: space-between;
+			gap: 40px;
+			 margin-right: 30px;
+		}
+		.list{
+			margin-bottom: 50px;
+		}
+		.list li{
+			flex: 1 1 150px;
+	
+		}
+		content img{
+			width: 100%;
+			height: auto;
+			min-height: 100px;
+			min-width: 100px;
+			border-radius: 20px;
+			overflow: hidden;
+		}
+
+		.artist .seeall{
+			margin-left: 50px;
+		}
+
 	</style>
 </head>
 <body>
@@ -40,7 +95,7 @@
 				<li class="home"><a href="" target="_self">홈</a></li>
 				<li><a href="">인기음악</a></li>
 				<li><a href="">최신음악</a></li>
-				<li><a href="">가수</a></li>
+				<li><a href="artist.html">가수</a></li>
 				<li><a href="">뮤직비디오</a></li>
 			</ul>
 			<div class="line">line</div>
@@ -51,7 +106,7 @@
 
 		  	<div class="track-info">
 		    	<strong>Music Name</strong>
-		    	<span>Singer</span>
+		    	<span>Artist</span>
 		  	</div>
 
 			<div class="controls">
@@ -71,8 +126,6 @@
 			</div>
 		</div>
 	</aside>
-
-	<hr>
 
 	<main>
 		<div class="slider">
@@ -97,19 +150,186 @@
 		</div>
 	</main>
 
-	<content>
-		<div class="content">
-			<div>추천음악</div>
-			<img src="" width="100px" height="100px">
-			<img src="" width="100px" height="100px">
-			<img src="" width="100px" height="100px">
-			<img src="" width="100px" height="100px">
-			<img src="" width="100px" height="100px">
-			<img src="" width="100px" height="100px">
-			<img src="" width="100px" height="100px">
-			<img src="" width="100px" height="100px">
+	<content class="popularity">
+		<ul class="maintitle">
+			<li>최신음악</li>
+			<li><a href="최신음악.html"><span>전체보기</span>→</a></li>
+		</ul>
+		<div class="music list">
+			<ul>
+				<li><img src="images/blackmamba.jpg"></li>
+				<li><img src="images/nextlevel.jpg"></li>
+				<li><img src="images/savage.jpg"></li>
+				<li><img src="images/girls.jpg"></li>
+				<li><img src="images/forever.jpg"></li>
+			</ul>
+		</div>
+
+		<div class="music list">
+			<ul>
+				<li><img src="images/illusion.jpg"></li>
+				<li><img src="images/myworld.jpg"></li>
+				<li><img src="images/drama.jpg"></li>
+				<li><img src="images/whiplash.jpg"></li>
+				<li><img src="images/synk.jpg"></li>
+			</ul>
 		</div>
 	</content>
+
+	<content class="artist">
+		<ul class="maintitle">
+			<li>가수</li>
+			<li class="seeall"><a href="가수.html"><span>전체보기</span>→</a></li>
+		</ul>
+
+		<div class="artis list">
+			<ul>
+				<li><img src="images/karina.jpg" width="150px" height="150px"></li>
+				<li><img src="images/giselle.jpg" width="150px" height="150px"></li>
+				<li><img src="images/winter.jpg" width="150px" height="150px"></li>
+				<li><img src="images/ningning.jpg" width="150px" height="150px"></li>
+				<li><img src="images/ningning.jpg" width="150px" height="150px"></li>
+			</ul>
+		</div>
+
+	</content>
+
+	<content class="chart">
+			<div class="container">
+			    <!-- Top Singles -->
+			    <div class="list-section">
+			      <h2>Top Singles</h2>
+			      <ul class="list">
+			        <li class="list-item">
+			          <div class="left">
+			            <div class="thumbnail" style="background-image: url('thumb1.jpg');"></div>
+			            <div class="text-group">
+			              <div class="title">Cinematic</div>
+			              <div class="artist">AudioPizza</div>
+			            </div>
+			          </div>
+			        <div class="duration">2:35</div>
+				</li>
+ 			    <li class="list-item">
+			          <div class="left">
+			            <div class="thumbnail" style="background-image: url('thumb1.jpg');"></div>
+			            <div class="text-group">
+			              <div class="title">Cinematic</div>
+			              <div class="artist">AudioPizza</div>
+			            </div>
+			          </div>
+			        <div class="duration">2:35</div>
+				</li>
+				<li class="list-item">
+			          <div class="left">
+			            <div class="thumbnail" style="background-image: url('thumb1.jpg');"></div>
+			            <div class="text-group">
+			              <div class="title">Cinematic</div>
+			              <div class="artist">AudioPizza</div>
+			            </div>
+			          </div>
+			        <div class="duration">2:35</div>
+				</li>
+				<li class="list-item">
+			          <div class="left">
+			            <div class="thumbnail" style="background-image: url('thumb1.jpg');"></div>
+			            <div class="text-group">
+			              <div class="title">Cinematic</div>
+			              <div class="artist">AudioPizza</div>
+			            </div>
+			          </div>
+			        <div class="duration">2:35</div>
+				</li>
+				<li class="list-item">
+			          <div class="left">
+			            <div class="thumbnail" style="background-image: url('thumb1.jpg');"></div>
+			            <div class="text-group">
+			              <div class="title">Cinematic</div>
+			              <div class="artist">AudioPizza</div>
+			            </div>
+			          </div>
+			        <div class="duration">2:35</div>
+				</li>
+				<!-- 추가 항목들 아래와 같은 구조로 계속 복사 -->
+ 			</ul>
+ 		</div>
+
+		    <!-- New Singles -->
+    	<div class="list-section">
+      		<h2>New Singles</h2>
+      			<ul class="list">
+        			<li class="list-item">
+          				<div class="left">
+            				<div class="thumbnail" style="background-image: url('thumb2.jpg');"></div>
+            				<div class="text-group">
+              					<div class="title">Got What I Got</div>
+              					<div class="artist">Jason Aldean</div>
+            				</div>
+          				</div>
+          				<div class="duration">2:58</div>
+        			</li>
+					<li class="list-item">
+          				<div class="left">
+            				<div class="thumbnail" style="background-image: url('thumb2.jpg');"></div>
+            				<div class="text-group">
+              					<div class="title">Got What I Got</div>
+              					<div class="artist">Jason Aldean</div>
+            				</div>
+          				</div>
+          				<div class="duration">2:58</div>
+        			</li><li class="list-item">
+          				<div class="left">
+            				<div class="thumbnail" style="background-image: url('thumb2.jpg');"></div>
+            				<div class="text-group">
+              					<div class="title">Got What I Got</div>
+              					<div class="artist">Jason Aldean</div>
+            				</div>
+          				</div>
+          				<div class="duration">2:58</div>
+        			</li><li class="list-item">
+          				<div class="left">
+            				<div class="thumbnail" style="background-image: url('thumb2.jpg');"></div>
+            				<div class="text-group">
+              					<div class="title">Got What I Got</div>
+              					<div class="artist">Jason Aldean</div>
+            				</div>
+          				</div>
+          				<div class="duration">2:58</div>
+        			</li><li class="list-item">
+          				<div class="left">
+            				<div class="thumbnail" style="background-image: url('thumb2.jpg');"></div>
+            				<div class="text-group">
+              					<div class="title">Got What I Got</div>
+              					<div class="artist">Jason Aldean</div>
+            				</div>
+          				</div>
+          				<div class="duration">2:58</div>
+        			</li>
+        <!-- 추가 항목들 -->
+      			</ul>
+    		</div>
+  		</div>
+	</content>
+
+	<footer>
+		<div>
+			<ul>
+				<li>이용약관</li>
+				<li>위치기반서비스 이용약관</li>
+				<li>개인정보처리방침</li>
+				<li>청소년보호정책</li>
+				<li>제휴/프로모션문의</li>
+				<li>이메일주소무단수집거부</li>
+				<li>파트너센터</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>문의전화 : 0000-0000</li>
+				<li>이메일 :  aaaa@dongyang.ac.kr</li>
+			</ul>
+		</div>
+	</footer>
 
 </body>
 </html>
