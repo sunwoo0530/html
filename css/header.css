@@ -4,6 +4,9 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    margin-left: 200px;
+    
+
 }
 header ul{
     display: flex;
