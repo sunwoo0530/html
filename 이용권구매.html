@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이용권 구매</title>
+    <style>
+        body {
+            font-size: 1.0em;
+            background-color: rgba(243, 245, 245, 0.872);
+        }
+        .plans {
+            position: absolute;
+            left: 300px;
+            top: 150px;
+        }
+        .plan1, .plan2, .plan3 {
+            float: left;
+            height: 450px;
+            width: 300px;
+            border: 2px outset;
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .plan1:hover, .plan2:hover, .plan3:hover {
+            background-color: rgba(153, 205, 50, 0.187);
+        }
+        p.planname {
+            font-size: 1.4em;
+            font-weight: normal;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+        div b {
+            font-size: 2.3em;
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            line-height: 30px;
+        }
+        div p {
+            font-size: 1.0em;
+            line-height: 35px;
+        }
+        button {
+            width: 120px;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(157, 205, 63);
+        }
+        .button1 {
+            margin-top: 130px;
+        }
+        .button2 {
+            margin-top: 95px;
+        }
+        .button3 {
+            margin-top: 25px;
+        }
+        button:hover {
+            background-color: olivedrab;
+        }
+    </style>
+</head>
+<body>
+    <div class="plans">
+    <div class="plan1">
+        <p class="planname">기본 요금제</p>
+        <p><b>9,900원</b> /월<br>
+        광고 제거<br>
+        16 bit 표준 음질<br></p>
+        <button class="button1" type="button">선택</button>
+    </div>
+
+
+    <div class="plan2">
+        <p class="planname">프리미엄 요금제</p>
+        <p><b>13,900원</b> /월<br>
+        광고 제거<br>
+        음악 오프라인 감상<br>
+        24bit 고품질 음악</p>
+        <button class="button2" type="button">선택</button>
+    </div>
+
+
+    <div class="plan3">
+        <p class="planname">프리미엄 연간 이용권</p>
+
+        <p><b>126,000원</b> /년<br>
+        10,500원 /월<br>
+        광고 제거<br>
+        음악 오프라인 감상<br>
+        32bit 프리미엄 음질<br>
+        30%이상 할인가</p>
+        <button class="button3" type="button">선택</button>
+    </div>
+    </div>
+</body>
+</html>
