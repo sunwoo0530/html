@@ -1,0 +1,144 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mypage.css">
+<style>
+.side-menubar .security{
+  font-weight: bold;
+  color: white;
+}
+.security-box {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2)
+}
+.security-box h3 {
+  margin-top: 0;
+  color: #2d3436;
+}
+.security-box input[type="password"]{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.security-box button {
+  padding: 5px 10px;
+  background-color: #00c73c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.security-box button:hover {
+  background-color: #07b641;
+  transform: scale(1.1);
+}
+
+.security-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.security-box ul li {
+  margin-bottom: 10px;
+}
+.submit {
+  display: flex;
+  padding: 20px;
+  gap: 12px;
+  align-items: center;
+}
+.save {
+  background-color: #22d661;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+.cancel{
+  background-color: whitesmoke;
+  border: none;
+  color: black;
+  font-size: 14px;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.cancel:hover {
+  background-color: lightgray;
+  transform: scale(1.1);
+}
+
+.save:hover {
+  background-color: #07b641;
+  transform: scale(1.1);
+}
+
+</style>
+</head>
+<body>
+<aside>
+<div class="side-menubar">
+  <!-- 사이드 메뉴바 (왼쪽탭) -->
+<div class="logo"> Music </div>
+<a href="mypage.html" class="home">홈</a>
+<a href="manager.html" class="manager">개인정보 관리</a>
+<a href="security.html" class="security">로그인 보안</a>
+<a href="service.html" class="service">이용약관</a>
+<hr />
+<a href="membership.html">이용권 정보</a>
+</div>
+</aside>
+ <section id="security">
+  <form class="security-form">
+  <h2>로그인 보안</h2>
+  <br><br>
+  <div class="security-box">
+  <h3>비밀번호 변경</h3>
+  <br>
+  <label>현재 비밀번호 <input type="password" required></label>
+  <label>새 비밀번호 <input type="password" required></label>
+  <label>새 비밀번호 확인 <input type="password" required></label>
+  <br>
+  <button>비밀번호 변경</button>
+  </div>
+
+  <div class="security-box">
+  <h3>이중 인증 (2단계 인증)</h3>
+  <p>이중 인증으로 내 계정을 보호해 주세요.</p><br>
+  <button>이중 인증 설정</button>
+  </div>
+
+  <div class="security-box">
+  <h3>로그인된 기기</h3>
+  <ul>
+    <li>Chrome · Windows · 서울 · 2025-06-02 14:10 <button style="margin: 10px;">로그아웃</button></li>
+    <li>iPhone · Safari · 경기도 · 2025-05-31 22:05 <button style="margin: 10px;">로그아웃</button></li>
+  </ul>
+  </div>
+
+  <div class="security-box">
+  <h3>로그인 알림 설정</h3><br>
+  <label>
+  <input type="checkbox" name="signal" checked /> 새 로그인 발생 시 이메일 알림</label><br>
+  <label>
+  <input type="checkbox" name="signal1" /> 새 로그인 발생 시 문자 알림</label>
+  </div>
+</div>
+<div class="submit">
+  <button type="submit" class="save">프로필 저장하기</button>
+  <button type="reset" class="cancel">취소하기</button>
+</div>
+</form>
+</section>
+</body>
+</html>

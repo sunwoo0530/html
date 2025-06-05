@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+body {
+    color: white;
+    padding-left: 300px;
+    }
+.side-menubar {
+    width: 230px;
+    background-color: #222;
+    color: white;
+    height: 100%;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    }
+.side-menubar a {                   
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.8);
+    margin-bottom: 20px;         
+    padding: 10px 15px;
+    }
+.side-menubar a:hover {
+    color: white;         
+     border-radius: 6px;
+     background-color: #444;
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+}
+section {
+    padding-top: 40px;
+    margin-bottom: 60px;
+    color: black;
+}
