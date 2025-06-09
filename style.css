@@ -1,0 +1,186 @@
+/* 전체 초기화 및 기본 스타일 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Noto Sans KR', Arial, sans-serif;
+  background: #fafbfc;
+}
+
+/* 레이아웃: 컨테이너, 사이드바, 메인 콘텐츠 */
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #333;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #333;
+  text-decoration: none;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px 80px 40px;
+  margin-left: 180px;
+}
+
+/* 상단 네비게이션 */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  margin-left: 180px;
+  position: static;
+  margin-bottom: 20px;
+}
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.search-bar {
+  width: 300px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #444;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #4a60a1;
+}
+
+/* 하단 플레이어 */
+.music-player {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 70px;
+  background: #f8f9fb;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 100;
+  justify-content: space-between;
+}
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.player-info .fa-music {
+  font-size: 28px;
+  color: #4a60a1;
+}
+.player-info .album-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #eee;
+}
+.music-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+}
+.music-artist {
+  font-size: 13px;
+  color: #888;
+}
+.player-controls {
+  display: flex;
+  gap: 18px;
+}
+.player-controls button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #4a60a1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.player-controls button:hover {
+  color: #222;
+}
+.player-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.player-progress input[type="range"] {
+  width: 300px;
+}
+.current-time {
+  font-size: 13px;
+  color: #888;
+}
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+  min-width: 160px;
+}
+.volume-control .fa-volume-up {
+  color: #4a60a1;
+  font-size: 18px;
+}
+.volume-control .volume-slider {
+  width: 90px;
+}

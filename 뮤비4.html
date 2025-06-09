@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>MusicStream</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+        .media-container {
+      max-width: 900px;
+      margin: 40px auto 0 auto;
+      padding: 0 0 60px 0;
+    }
+    .media-breadcrumb {
+      font-size: 13px;
+      color: #aaa;
+      margin: 0 0 18px 0;
+      padding: 32px 0 0 0;
+      text-align: right;
+      letter-spacing: -0.5px;
+    }
+    .media-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 24px 0;
+      text-align: left;
+      padding-left: 0;
+    }
+    .media-video-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 34px;
+    }
+    .media-video {
+      width: 640px;
+      height: 360px;
+      border-radius: 12px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+      margin-bottom: 0;
+    }
+    .media-info {
+      margin: 30px 0 0 0;
+      padding-left: 0;
+    }
+    .media-song-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .media-artist {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 2px;
+    }
+    .media-meta {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .media-tags {
+      margin: 18px 0 0 0;
+      display: flex;
+      gap: 8px;
+    }
+    .media-tag {
+      font-size: 13px;
+      color: #337ab7;
+      background: #f3f7fc;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-weight: 500;
+    }
+    /* 추천 영상/관련 영상 */
+    .recommend-section {
+      max-width: 1000px;
+      margin: 0 auto 36px auto;
+      border-radius: 12px;
+      padding: 32px 0 32px 0;
+    }
+    .recommend-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      margin-left: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .recommend-title span {
+      font-size: 14px;
+      color: #aaa;
+      font-weight: normal;
+    }
+    .recommend-list {
+      display: flex;
+      gap: 22px;
+      justify-content: flex-start;
+      padding: 0 16px;
+    }
+    .recommend-card {
+      width: 220px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.18s;
+    }
+    .recommend-card:hover {
+      box-shadow: 0 4px 22px rgba(0,0,0,0.13);
+    }
+    .thumb-wrap {
+      position: relative;
+      width: 100%;
+      height: 124px;
+      background: #eee;
+    }
+    .recommend-thumb {
+     width: 100%;
+      height: 124px;
+      object-fit: cover;
+      border-radius: 14px 14px 0 0;
+      display: block;
+    }
+    .recommend-duration {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      font-size: 13px;
+      border-radius: 6px;
+      padding: 2px 8px;
+      z-index: 2;
+      font-weight: 500;
+    }
+    .recommend-info {
+      padding: 13px 14px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .recommend-song {
+      font-size: 16px;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .recommend-artist {
+      font-size: 14px;
+      color: #888;
+      white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+    }
+    a:link {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       MusicStream
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="main.html"><li>최신음악</li></a>
+        <a href="main.html"><li>인기음악</li></a>
+        <a href="main.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="main-content">
+      <!-- 상단 네비게이션 -->
+      <header class="top-nav">
+        <input type="text" class="search-bar" placeholder="검색어를 입력하세요">
+        <div class="nav-links">
+          <a href="mypage.html">마이페이지</a>
+          <a href="공지사항.html">공지사항</a>
+          <a href="FAQ.html">FAQ</a>
+          <a href="로그인.html" target="_blank">로그인</a>
+        </div>
+      </header>
+
+       <div class="media-container">
+    <div class="media-title">안녕, 우주(Memory)</div>
+    <div class="media-video-wrap">
+      <iframe class="media-video"
+        src="https://www.youtube.com/embed/bpJS9ZnTkRw?si=kBR4aH4fARO9aL05"
+        allowfullscreen
+        title="안녕, 우주(Memory) MV"></iframe>
+    </div>
+    <div class="media-info">
+      <div class="media-song-title">안녕, 우주(Memory)</div>
+      <div class="media-artist">도영 (DOYOUNG)</div>
+      <div class="media-meta">2025.06.09 &nbsp; &middot; &nbsp; 3:45</div>
+      <div class="media-tags">
+        <span class="media-tag">#안녕, 우주(Memory)</span>
+        <span class="media-tag">#도영 (DOYOUNG)</span>
+      </div>
+    </div>
+   <div class="recommend-section">
+  <div class="recommend-title">
+    추천 영상 <span>(총 4건)</span>
+  </div>
+  <div class="recommend-list">
+    <div class="recommend-card">
+      <a href="뮤비3.html"><div class="thumb-wrap">
+        <img class="recommend-thumb" src="images/mv3.jpg" alt="Girls Will Be Girls">
+        <span class="recommend-duration">02:54</span>
+      </div>
+      <div class="recommend-info">
+        <div class="recommend-song">Girls Will Be Girls</div>
+        <div class="recommend-artist">ITZY (있지)</div>
+      </div></a>
+    </div>
+    <div class="recommend-card">
+      <a href="뮤비5.html"><div class="thumb-wrap">
+        <img class="recommend-thumb" src="images/mv5.jpg" alt="눈물참기">
+        <span class="recommend-duration">05:09</span>
+      </div>
+      <div class="recommend-info">
+        <div class="recommend-song">눈물참기</div>
+        <div class="recommend-artist">QWER</div>
+      </div></a>
+    </div>
+    <div class="recommend-card">
+      <a href="뮤비1.html"><div class="thumb-wrap">
+        <img class="recommend-thumb" src="images/mv1.jpg" alt="BEEP">
+        <span class="recommend-duration">03:19</span>
+      </div>
+      <div class="recommend-info">
+        <div class="recommend-song">BEEP</div>
+        <div class="recommend-artist">izna (이즈나)</div>
+      </div></a>
+    </div>
+    <div class="recommend-card">
+      <a href="뮤비7.html"><div class="thumb-wrap">
+        <img class="recommend-thumb" src="images/mv7.jpg" alt="돌아오지 않을 시간">
+        <span class="recommend-duration">04:27</span>
+      </div>
+      <div class="recommend-info">
+        <div class="recommend-song">돌아오지 않을 시간</div>
+        <div class="recommend-artist">황가람</div>
+      </div></a>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- 하단 음악 플레이어 -->
+    <footer class="music-player">
+      <div class="player-info">
+        <img class="album-cover" src="images/우다계.jpg" alt="앨범 커버">
+        <div>
+          <div class="music-title">Music Name</div>
+          <div class="music-artist">Artist</div>
+        </div>
+      </div>
+      <div class="player-controls">
+        <button><i class="fa fa-backward"></i></button>
+        <button><i class="fa fa-play"></i></button>
+        <button><i class="fa fa-forward"></i></button>
+      </div>
+      <div class="player-progress">
+        <input type="range" min="0" max="100" value="30">
+        <span class="current-time">-02:34</span>
+      </div>
+      <div class="volume-control">
+        <i class="fa fa-volume-up"></i>
+        <input type="range" class="volume-slider" min="0" max="100" value="80">
+      </div>
+    </footer>
+</body>
+</html>

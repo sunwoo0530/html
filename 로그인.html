@@ -1,120 +1,172 @@
 <!DOCTYPE html>
-<html>
-
-<head>    
-    <title>Log in</title>
-    <style>
-        body {
-            background-image: url(images/회원가입배경.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            font-size: 1.2em;
-        }
-
-        h1 {
-            text-align: center;
-            color: #2f4156;
-        }
-
-        fieldset {
-        background-color: white;
-        border: 3px outset lightgray;
-        width: 350px;
-        text-align: left;
-        padding: 40px;
-        margin: auto;
-        }
-
-        legend {
-            text-align: center;
-            font-size: 1.2em;
-        }
-
-        input[type=text],input[type=password] {
-            border: 2px solid #525252;
-            border-radius: 5px;
-            width: 70%;
-            padding: 10px 10px;
-            margin: 3px 30px 15px 30px;       
-        }
-
-        input[type=text]:hover,input[type=password]:hover {
-            background-color: #c8d9e6;
-        }
-
-        input[type=text]:focus,input[type=password]:focus {
-            background-color: #c8d9e6;
-        }
-
-        label {
-            margin: 0px 30px;
-            color: #3c3b3b;
-        }
-
-        input[type=submit] {
-            font-size: 1.0em;
-            background-color: #5399cf;
-            border: none;
-            border-radius: 5px;
-            color:white;
-            padding:5px 30px;
-            margin: 0px 110px;
-        }
-        
-        input[type=checkbox] {
-            margin: 0px 30px;
-        }
-
-        a {
-            margin: 0px 30px;
-        }
-
-        a:link {
-            color: #3c3b3b;
-        }
-
-        a:visited {
-            color: #868383;
-        }        
-
-
-    </style>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>MusicStream 로그인</title>
+  <meta name="viewport" content="width=400, initial-scale=1.0">
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: 'Noto Sans KR', sans-serif;
+      margin-top: 100px;
+    }
+    .login-container {
+      width: 370px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 36px 32px 28px 32px;
+      text-align: center;
+    }
+    .login-container h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .login-container h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 26px;
+      color: #222;
+    }
+    .login-input {
+      width: 100%;
+      padding: 12px 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .input-wrap {
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .input-eye {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #bbb;
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+    .login-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 0.97rem;
+    }
+    .login-row label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 0.97rem;
+      color: #222;
+    }
+    .login-row input[type="checkbox"] {
+      margin-right: 5px;
+      accent-color: #222;
+    }
+    .login-row a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .login-btn {
+      width: 100%;
+      background: #111;
+      color: #fff;
+      font-size: 1.08rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 24px;
+      padding: 13px 0;
+      margin-bottom: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login-btn:active {
+      background: #333;
+    }
+    .login-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 18px;
+      font-size: 0.97rem;
+    }
+    .login-links a {
+      color: #222;
+      text-decoration: underline;
+    }
+    .social-login-label {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.97rem;
+      margin-bottom: 8px;
+    }
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 8px 0 18px 0;
+    }
+    .social-login a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      transition: box-shadow 0.2s;
+      overflow: hidden;
+    }
+    .social-login a:hover {
+      box-shadow: 0 0 0 2px #ddd;
+    }
+    .social-login img {
+      width: 24px;
+      height: 24px;
+      border-radius: 0;
+      object-fit: contain;
+    }
+  </style>
 </head>
-
-
-
 <body>
-
-    <h1>로그인</h1>
-
-
-            <form method="post" action="process.jsp">
-            <fieldset>
-            <legend>로그인 정보</legend>
-
-            <label for="id">아이디</label><br>
-            <input type="text" id="id" name="id" placeholder="아이디" required autofocus><br>
-
-            <label for="email">비밀번호</label><br>
-            <input type="password" placeholder="비밀번호" required><br>
-
-
-            <input type="checkbox" value="auto_login">자동 로그인<br>
-            <input type="checkbox" value="id_save">아이디 저장<br><br>
-
-
-            <a href="회원가입.html" target="_blank">회원가입</a><br>
-            <a href="#" target="_blank">비밀번호 찾기</a><br><br>
-
-            <input type="Submit" value="로그인">
-            </fieldset>
-
-            
-            </form>
-
-
-
-
+  <div class="login-container">
+    <h1>MusicStream</h1>
+    <h2>로그인</h2>
+    <form>
+      <input type="email" class="login-input" placeholder="이메일을 입력하세요" required>
+      <div class="input-wrap">
+        <input type="password" class="login-input" placeholder="비밀번호를 입력하세요" required>
+      </div>
+      <div class="login-row">
+        <label><input type="checkbox">로그인 유지</label>
+        <a href="#">비밀번호 찾기</a>
+      </div>
+      <button type="submit" class="login-btn">이메일로 로그인</button>
+    </form>
+    <div class="login-links">
+      <a href="회원가입.html">회원가입</a>
+      <a href="#">이메일 찾기</a>
+    </div>
+    <div class="social-login-label">간편로그인</div>
+    <div class="social-login">
+      <a href="#" title="네이버"><img src="images/naver.png" alt="N"></a>
+      <a href="#" title="카카오"><img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" alt="K"></a>
+      <a href="#" title="구글"><img src="images/google.png" alt="G"></a>
+      <a href="#" title="애플"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="A"></a>
+      <a href="#" title="페이스북"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="F"></a>
+    </div>
+     
+    </div>
+  </div>
 </body>
-
 </html>

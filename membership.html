@@ -1,0 +1,84 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mypage.css">
+<style>
+
+.side-menubar .membership{
+  font-weight: bold;
+  color: white;
+}
+.outer-box {
+  width: 500px;
+  padding: 20px;
+  background-color: #FFFAFA; 
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.outer-box li{
+  margin: 10px;
+}
+.inner-box {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #d3d3d33d; 
+  border: none;
+  border-radius: 6px;
+  width:350px;
+}
+.purchase{
+  background-color: #22d661;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  margin-top: 30px;
+  line-height: 10px;
+}
+.purchase a {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.purchase:hover{
+  background-color: #07b641;
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+<aside>
+<div class="side-menubar">
+  <!-- 사이드 메뉴바 (왼쪽탭) -->
+<a href="main.html"><div class="logo"> Music </div></a>
+<a href="mypage.html" class="home">홈</a>
+<a href="manager.html" class="manager">개인정보 관리</a>
+<a href="security.html" class="security">로그인 보안</a>
+<a href="service.html" class="service">이용약관</a>
+<hr />
+<a href="membership.html" class="membership">이용권 정보</a>
+</div>
+</aside>
+<section id="membership">
+    <h1>이용권 정보</h1>
+    <br><br>
+    <div id="box">
+      <div class="outer-box">
+        <h2>Premium</h2>
+        <br><br>
+      <ul>
+    <li>언제든지 자유롭게 해지가 가능합니다.</li>
+      </ul>
+      <div class="inner-box">
+        요금제가 25.6.17에 Free 요금제로 전환됩니다.
+      </div>
+      </div>
+      <div class="purchase">
+        <a href="/이용권구매.html">이용권 구매</a>
+      </div>
+</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>마이페이지</title>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+body {
+    color: white;
+    padding-left: 300px;
+    }
+.side-menubar {
+    width: 230px;
+    background-color: #222;
+    color: white;
+    height: 100%;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    }
+.side-menubar a {                   
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.8);
+    margin-bottom: 20px;         
+    padding: 10px 15px;
+    }
+.side-menubar a:hover {
+    color: white;         
+     border-radius: 6px;
+     background-color: #444;
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+}
+section {
+    padding-top: 40px;
+    margin-bottom: 60px;
+    color: black;
+}
+.box {
+  display: block;
+  gap: 20px;
+ max-width: 745px;
+}
+.side-menubar .home{
+  font-weight: bold;
+  color: white;
+}
+.account{ 
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #FFFAFA;
+  border-radius: 8px;
+  max-width: 745px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+.menu{
+  background: white;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+.menu h4 {
+  margin: 0 0 10px;
+}
+.menu p {
+  font-size: 14px;
+  color: #666;
+}
+.menu a {
+  font-size: 14px;
+  color: #00cc66;
+  text-decoration: none;
+}
+.box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover {
+  transform: scale(1.02);
+}
+.purchase{
+  border: 1px solid #00cc66 ;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  margin-top: 30px;
+  line-height: 10px;
+}
+.purchase a {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.purchase:hover{
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+<aside>
+<div class="side-menubar">
+  <!-- 사이드 메뉴바(왼쪽탭) -->
+<a href="main.html"><div class="logo"> Music </div></a>
+<a href="mypage.html" class="home">홈</a>
+<a href="manager.html" class="manager">개인정보 관리</a>
+<a href="security.html" class="security">로그인 보안</a>
+<a href="service.html" class="service">이용약관</a>
+<hr />
+<a href="membership.html">이용권 정보</a>
+</div>
+</aside>
+ 
+<main>
+<section id="home">
+<h2>계정</h2>
+<br><br>
+ <div class="account">
+<h3>UnKnown님 반갑습니다</h3><br>
+<hr /><br>
+<p>UnKnown님의 등급은 <strong>Premium</strong> 입니다.</p><br>
+<p style="font-size:14px">요금제가 25.6.17에 <strong>기본 요금제</strong>로 전환됩니다.<br>
+이용권을 구매하시면 더 많은 기능과 혜택을 즐기실 수 있습니다.</p>
+ <div class="purchase">
+<a href="이용권구매.html" target="_blank">이용권 구매</a>
+ </div>
+</div>
+ <div class="box">
+  <div class="box1">
+ <div class="menu">
+<h4>개인정보 관리</h4>
+<p>개인정보를 관리할 수 있습니다.</p>
+<a href="manager.html"> 이동하기 </a>
+</div>
+</div>
+   <div class="box2">
+ <div class="menu">
+<h4>로그인 보안</h4>
+<p>로그인 보안을 설정할 수 있습니다.</p>
+<a href="security.html"> 이동하기 </a>
+</div>
+</div>
+  <div class="box3">
+ <div class="menu">
+<h4>이용약관</h4>
+<p>서비스 내의 이용약관을 조회할 수 있습니다.</p>
+<a href="service.html"> 이동하기 </a>
+</div>
+</div>
+  <div class="box4">
+ <div class="menu">
+<h4>이용권 정보</h4>
+<p>보유하고 있는 이용권 정보를 확인할 수 있습니다.</p>
+<a href="membership.html"> 이동하기 </a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+</body>
+</html>
