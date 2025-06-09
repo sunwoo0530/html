@@ -250,6 +250,100 @@ input[name="tab_item"] {
   min-width: 50px;
   text-align: right;
 }
+/* 하단 플레이어 */
+.music-player {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 70px;
+  background: #f8f9fb;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 100;
+  justify-content: space-between;
+}
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.player-info .fa-music {
+  font-size: 28px;
+  color: #4a60a1;
+}
+.music-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+}
+.music-artist {
+  font-size: 13px;
+  color: #888;
+}
+.player-controls {
+  display: flex;
+  gap: 18px;
+}
+.player-controls button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #4a60a1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.player-controls button:hover {
+  color: #222;
+}
+.player-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.player-progress input[type="range"] {
+  width: 300px;
+}
+.current-time {
+  font-size: 13px;
+  color: #888;
+}
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+  min-width: 160px;
+}
+.volume-control .fa-volume-up {
+  color: #4a60a1;
+  font-size: 18px;
+}
+.volume-control .volume-slider {
+  width: 90px;
+}
+.player-launch-link {
+  margin-left: 18px;
+  color: #4a60a1;
+  font-weight: 600;
+  font-size: 1.05rem;
+  background: none;
+  border: none;
+  padding: 0 12px;
+  border-radius: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.18s, background 0.18s;
+  line-height: 1.7;
+  display: inline-block;
+}
+.player-launch-link:hover {
+  color: #fff;
+  background: #4a60a1;
+  text-decoration: none;
+}
 
   </style>
 </head>

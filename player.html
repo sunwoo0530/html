@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Music Player UI</title>
+<style>
+body {
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+  font-family: 'Pretendard', 'Segoe UI', Arial, sans-serif;
+}
+.music-ui-wrap {
+  display: flex;
+  width: 860px;
+  height: 520px;
+  margin: 48px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 36px rgba(30,41,59,0.13), 0 1.5px 0 #e0e7ef inset;
+  overflow: hidden;
+  background: #fff;
+}
+.music-left {
+  width: 340px;
+  background: linear-gradient(135deg, #f1f5f9 80%, #e0e7ef 100%);
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 32px;
+}
+.album-panel {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  animation: fadein 0.5s;
+}
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.album-art-wrap {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin-bottom: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 32px #d9e6f680;
+  background: #f0f4fa;
+}
+.album-art-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+.album-info-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: linear-gradient(0deg, rgba(30,41,59,0.78) 90%, rgba(30,41,59,0.04) 100%);
+  color: #fff;
+  padding: 22px 18px 13px 18px;
+  text-align: left;
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+  box-shadow: 0 4px 12px #0001;
+}
+.album-info-overlay h3 {
+  margin: 0 0 3px 0;
+  font-size: 1.21rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-shadow: 0 2px 8px #0002;
+}
+.album-info-overlay p {
+  margin: 0;
+  font-size: 1.01rem;
+  opacity: 0.93;
+  font-weight: 500;
+  text-shadow: 0 1px 4px #0002;
+}
+.album-panel audio {
+  width: 100%;
+  margin-top: 38px;
+  border-radius: 8px;
+  background: #f0f4fa;
+  box-shadow: 0 2px 8px #bae6fd33;
+}
+#track1:checked ~ .music-left #album1,
+#track2:checked ~ .music-left #album2,
+#track3:checked ~ .music-left #album3,
+#track4:checked ~ .music-left #album4 { display: flex; }
+
+.music-right {
+  background: #f9fafb;
+  border-radius: 0 20px 20px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 40px 0;
+  box-shadow: -2px 0 18px #e0e7ef22 inset;
+}
+.music-right header {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #22223b;
+  padding: 0 36px 22px 36px;
+  letter-spacing: 0.5px;
+}
+.tracklist {
+  list-style: none;
+  padding: 0 26px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.tracklist li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 14px;
+  border-radius: 12px;
+  transition: background 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+}
+.tracklist label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: background 0.2s;
+  position: relative;
+}
+.tracklist label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid #bcdffb;
+  border-radius: 50%;
+  margin-right: 12px;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border 0.2s, background 0.2s;
+}
+input#track1:checked ~ .music-right .tracklist label[for="track1"],
+input#track2:checked ~ .music-right .tracklist label[for="track2"],
+input#track3:checked ~ .music-right .tracklist label[for="track3"],
+input#track4:checked ~ .music-right .tracklist label[for="track4"] {
+  background: #e8f0fe;
+  box-shadow: 0 4px 18px #bcdffb44;
+}
+input#track1:checked ~ .music-right .tracklist label[for="track1"]::before,
+input#track2:checked ~ .music-right .tracklist label[for="track2"]::before,
+input#track3:checked ~ .music-right .tracklist label[for="track3"]::before,
+input#track4:checked ~ .music-right .tracklist label[for="track4"]::before {
+  border: 7px solid #2563eb;
+  background: #e8f0fe;
+}
+.tracklist img {
+  width: 54px;
+  height: 54px;
+  border-radius: 9px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+}
+.track-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.track-meta strong {
+  font-size: 1.09rem;
+  color: #1e293b;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.track-meta span {
+  font-size: 0.98rem;
+  color: #64748b;
+  font-weight: 500;
+}
+input[type=radio] { display: none; }
+</style>
+</head>
+<body>
+<div class="music-ui-wrap">
+  <!-- 라디오 버튼들 (탭 역할) -->
+  <input type="radio" name="tracktab" id="track1" checked>
+  <input type="radio" name="tracktab" id="track2">
+  <input type="radio" name="tracktab" id="track3">
+  <input type="radio" name="tracktab" id="track4">
+
+  <!-- 좌측: 앨범+오디오 -->
+  <div class="music-left">
+    <div class="album-panel" id="album1">
+      <div class="album-art-wrap">
+        <img src="images/귀를기울이면.jpg" alt="">
+        <div class="album-info-overlay">
+          <h3>귀를 기울이면</h3>
+          <p>여자친구 | PARALLEL</p>
+        </div>
+      </div>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+      </audio>
+    </div>
+    <div class="album-panel" id="album2">
+      <div class="album-art-wrap">
+        <img src="images/너그리고나.jpg" alt="">
+        <div class="album-info-overlay">
+          <h3>너 그리고 나 (NAVILLERA)</h3>
+          <p>여자친구 | LOL</p>
+        </div>
+      </div>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mp3">
+      </audio>
+    </div>
+    <div class="album-panel" id="album3">
+      <div class="album-art-wrap">
+        <img src="images/밤.jpg" alt="">
+        <div class="album-info-overlay">
+          <h3>밤 (Time for the moon night)</h3>
+          <p>여자친구 | Time for the moon night</p>
+        </div>
+      </div>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mp3">
+      </audio>
+    </div>
+    <div class="album-panel" id="album4">
+      <div class="album-art-wrap">
+        <img src="images/시간을달려서.jpg" alt="">
+        <div class="album-info-overlay">
+          <h3>시간을 달려서 (Rough)</h3>
+          <p>여자친구 | Snowflake</p>
+        </div>
+      </div>
+      <audio controls>
+        <source src="audio/" type="audio/mp3">
+      </audio>
+    </div>
+  </div>
+  <!-- 우측: 플레이리스트 -->
+  <div class="music-right">
+    <header>플레이리스트</header>
+    <ul class="tracklist">
+      <li>
+        <label for="track1">
+          <span></span>
+          <img src="images/귀를기울이면.jpg" alt="귀를기울이면">
+          <div class="track-meta">
+            <strong>귀를 기울이면</strong>
+            <span>PARALLEL</span>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label for="track2">
+          <span></span>
+          <img src="images/너그리고나.jpg" alt="너그리고나">
+          <div class="track-meta">
+            <strong>너 그리고 나 (NAVILLERA)</strong>
+            <span>LOL</span>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label for="track3">
+          <span></span>
+          <img src="images/밤.jpg" alt="밤">
+          <div class="track-meta">
+            <strong>밤 (Time for the moon night)</strong>
+            <span>Time for the moon night</span>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label for="track4">
+          <span></span>
+          <img src="images/시간을달려서.jpg" alt="시간을달려서">
+          <div class="track-meta">
+            <strong>시간을 달려서 (Rough)</strong>
+            <span>Snowflake</span>
+          </div>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

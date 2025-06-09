@@ -8,6 +8,12 @@ body {
   font-family: 'Noto Sans KR', Arial, sans-serif;
   background: #fafbfc;
 }
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
 
 /* 레이아웃: 컨테이너, 사이드바, 메인 콘텐츠 */
 .container {
@@ -183,4 +189,24 @@ body {
 }
 .volume-control .volume-slider {
   width: 90px;
+}
+.player-launch-link {
+  margin-left: 18px;
+  color: #4a60a1;
+  font-weight: 600;
+  font-size: 1.05rem;
+  background: none;
+  border: none;
+  padding: 0 12px;
+  border-radius: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.18s, background 0.18s;
+  line-height: 1.7;
+  display: inline-block;
+}
+.player-launch-link:hover {
+  color: #fff;
+  background: #4a60a1;
+  text-decoration: none;
 }
