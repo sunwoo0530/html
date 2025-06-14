@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>곡정보6</title>
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    .album-container {
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+    .album-cover img {
+      width: 200px;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .album-info {
+      flex: 1;
+    }
+    .album-info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .album-info p {
+      margin: 4px 0;
+    }
+    .album-actions {
+      display: flex;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .tracklist {
+      margin-top: 30px;
+    }
+    .tracklist h3 {
+      margin-bottom: 10px;
+    }
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      text-align: center;
+      padding: 25px;
+      border-bottom: 1px solid#ddd;
+    }
+    th {
+      background: #f9f9f9;
+      font-weight: bold;
+    }
+    .like{
+      color: #999;
+    }
+    .album-description {
+      margin-top: 40px;
+    }
+    button {
+      padding: 8px 13px;
+      font-size: 14px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #000;
+    }
+    button a{
+    text-decoration: none;
+    color: #000;
+}
+button:hover{
+    background-color: #f9f9f9;
+}
+  </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+  <div class="album-container">
+    <div class="album-cover">
+      <img src="images/제니.jpg" alt="Ruby">
+    </div>
+    <div class="album-info">
+      <h2>Ruby</h2>
+      <p><strong>아티스트:</strong> 제니 (JENNIE)</p>
+      <p><strong>발매일:</strong> 2025.03.07</p>
+      <p><strong>장르:</strong> 댄스, R&B/Soul</p>
+      <p><strong>좋아요:</strong> 💚 18,771</p>
+      <p><strong>평점:</strong> ⭐ 4.8 (2,719명)</p>
+    </div>
+  </div>
+  <div class="tracklist">
+    <h3>수록곡(10)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>곡명</th>
+          <th>아티스트</th>
+          <th>좋아요</th>
+          <th>듣기</th>
+          <th>담기</th>
+          <th>다운</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Intro : JANE with FKJ</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">5,577</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+          <td>2</td>
+          <td><strong>like JENNIE</strong></td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">85,696</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+         <tr>
+          <td>3</td>
+          <td>start a wat</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">8,231</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Handlebars (feat. Dua Lipa)</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">17,772</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+          <tr>
+          <td>5</td>
+          <td>with the IE (way up)</td>
+          <td>aespa</td>
+          <td class="like">9,172</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ZEN</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">13,162</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>F.T.S</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">4,524</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Filter</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">4,635</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Seoul City</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">6,828</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Starlight</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">6,638</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>twin</td>
+          <td>제니 (JENNIE)</td>
+          <td class="like">11,661</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="album-description">
+    <h3>앨범소개</h3><br>
+    <p>
+    제니의 첫 솔로 정규앨범 (Ruby)는 음악적으로 다양한 재능과 매력을 보여주는 제니의 색을 담은 앨범입니다.</p>
+    <p>여러 장르의 노래와 컨셉을 통해 솔로 아티스트로서 제니의 음악적 가능성을 보여줄 계획입니다.</p>
+  </div>
+</section>
+</body>
+</html>

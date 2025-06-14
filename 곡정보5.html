@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>곡정보5</title>
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    .album-container {
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+    .album-cover img {
+      width: 200px;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .album-info {
+      flex: 1;
+    }
+    .album-info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .album-info p {
+      margin: 4px 0;
+    }
+    .album-actions {
+      display: flex;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .tracklist {
+      margin-top: 30px;
+    }
+    .tracklist h3 {
+      margin-bottom: 10px;
+    }
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      text-align: center;
+      padding: 25px;
+      border-bottom: 1px solid#ddd;
+    }
+    th {
+      background: #f9f9f9;
+      font-weight: bold;
+    }
+    .like{
+      color: #999;
+    }
+    .album-description {
+      margin-top: 40px;
+    }
+    button {
+      padding: 8px 13px;
+      font-size: 14px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #000;
+    }
+    button a{
+    text-decoration: none;
+    color: #000;
+}
+button:hover{
+    background-color: #f9f9f9;
+}
+  </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+       <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+  <div class="album-container">
+    <div class="album-cover">
+      <img src="images/세븐틴.jpg" alt="너에게 닿기를 앨범 커버">
+    </div>
+    <div class="album-info">
+      <h2>'HAPPY BURSTDAY'</h2>
+      <p><strong>아티스트:</strong> 세븐틴(SEVENTEEN)</p>
+      <p><strong>발매일:</strong> 2025.05.26</p>
+      <p><strong>장르:</strong> 댄스, 발라드, 랩/힙합</p>
+      <p><strong>좋아요:</strong> 💚 33,366</p>
+      <p><strong>평점:</strong> ⭐ 4.9 (5,908명)</p>
+    </div>
+  </div>
+  <div class="tracklist">
+    <h3>수록곡(7)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>곡명</th>
+          <th>아티스트</th>
+          <th>좋아요</th>
+          <th>듣기</th>
+          <th>담기</th>
+          <th>다운</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>HBD</td>
+          <td>세븐틴 (SEVENTEEN)</td>
+          <td class="like">32,504</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+          <td>2</td>
+          <td><strong>THUNDER</strong> (TITLE)</td>
+          <td>세븐틴 (SEVENTEEN)</td>
+          <td class="like">58,419</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+         <tr>
+          <td>3</td>
+          <td>Bad Influence (Prod. by Pharrell Williams)</td>
+          <td>세븐틴 (SEVENTEEN)</td>
+          <td class="like">26,723</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Skyfall (THE 8 Solo)</td>
+          <td>세븐틴 (SEVENTEEN)</td>
+          <td class="like">43,264</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+          <tr>
+          <td>5</td>
+          <td>Fortunate Change (JOSHUA Solo)</td>
+          <td>세븐틴 (SEVENTEEN)</td>
+          <td class="like">28,756</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>99.9% (WONWOO Solo)</td>
+          <td>세븐틴 (SEVENTEEN)</td>
+          <td class="like">43,349</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Raindrops (SEUNGKWAN Solo)</td>
+          <td>세븐틴 (SEVENTEEN)</td>
+          <td class="like">26,723</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="album-description">
+    <h3>앨범소개</h3><br>
+    <p>
+     무한한 가능성의 증명…세븐틴 정규 5집 [HAPPY BURSTDAY] 발매<br>
+타이틀곡 ‘THUNDER’, 13인 개인곡 포함 총 16개 트랙 눌러 담아<br>
+한계를 넘어 영원을 향해…다시 시작된 저돌적인 도전<br><br>
+
+10년간 달려왔지만 새롭게 나아갈 곳이 아직 남아 있다.<br> 매 순간 열정을 쏟으며 그 온도는 더욱 뜨거워졌다. 데뷔 10주년을 맞은 ‘K-팝 최고 그룹’ 세븐틴이 끝없는 도전과 변화를 통해 다시 태어난다. 5월 26일 발매된 정규 5집 [HAPPY BURSTDAY]는 이들의 무한한 가능성을 증명한다.<br>
+세븐틴의 지난 10년은 도전과 모험의 연속이었다. ‘13(멤버)+3(유닛)+1(하나의 팀)=17’이라는 공식과 함께 데뷔한 이들은 스스로 앨범과 무대를 만들며 ‘자체 제작 아이돌’이라는 새로운 길을 개척했다.<br> 음악적으로는 팝, EDM, 힙합, 록 등 다양한 장르를 흡수했고, 다채로운 유닛을 통해 팀의 색깔을 변주했다. 데뷔를 위해 관객 1000명을 모아야 했던 소년들은 어느새 ‘K-팝 최초’, ‘K-팝 최고’ 기록을 다시 쓰는 ‘글로벌 톱 티어’ 아티스트로 우뚝 섰다.<br>
+최정상의 자리에서도 세븐틴은 안주하지 않는다. 5월 26일 발매된 [HAPPY BURSTDAY]는 대담한 변화를 멈추지 않겠다는 의지의 선언이자 세븐틴의 마르지 않는 잠재력을 입증하는 장이다. 앨범명은 생일을 축하하는 영어 표현 ‘Happy Birthday’와 폭발, 분출, 시작을 의미하는 단어 ‘Burst’를 결합해 지었다. 도전을 통해 이뤄낸 세븐틴의 재탄생을 기념하는 동시에 이들의 새로운 가능성이 폭발한다는 의미를 담았다. 축하, 혼돈, 도전이 뒤섞인 이들의 강렬한 생일파티가 지금 시작된다.<br>
+    </p>
+  </div>
+</section>
+</body>
+</html>

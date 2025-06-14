@@ -1,85 +1,144 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>FAQ</title>
-    <style>
+<meta charset="UTF-8">
+<title>FAQ</title>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+ position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 90;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}    
         body {
-            font-size: 1.4em;
+            background-color: #f8f8f8;
+            font-size: 1.4em;font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
         }
-
         h1 {
             text-align: center;
             font-size: 2.5em;
             color: #000000;
+            margin-bottom: 70px;
         }
-
-        section {
-            width: 70%;
-            margin: auto;
-            position: relative;
-            top: 50px;
-        }
-
-        article {
+          article {
             height: 100px;
             overflow: hidden;
             transition: height 3s;
         }
-        
         article:hover {
             height: 240px
         }
-
-        div {
-            background-color: aliceblue;
-            margin: 10px;
-            padding: 7px;
-        }
-
         div img {
             margin: 10px 0px 10px 15px;
         }
-
         div p {
             display: inline;
             position: relative;
             bottom: 20px;
             left: 20px;
         }
-
         .Q {
             list-style-image: url('images/Q.png');
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 7px;
         }
-
         .A {
             list-style-image: url('images/A.png');
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 7px;
         }
-
         .answer {
             display: inline-block;
             bottom: 5px;
+            margin: 10px;
+            padding: 7px;
         }
-
     </style>
 </head>
 <body>
-    <h1>FAQ</h1>
+    <div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="main.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
     <section>
+    <h1>FAQ</h1>
     <article>
         <div class="Q">
             <img src="images/Q.png" alt="Q">
             <p>이용권 구매를 했는데 적용이 되지 않았습니다.</p>
         </div>
-        
         <div class="A">
             <img src="images/A.png" alt="A">
             <p class="answer">이용권 구매 후 적용까지 다소 시간이 걸릴 수 있습니다.<br>
             10~20분 후 다시 접속하시면 올바르게 적용이 되어 있습니다.</p>
         </div>
     </article>
-
-
     <article>
         <div class="Q">
             <img src="images/Q.png" alt="Q">
@@ -91,8 +150,6 @@
             그 외의 경우에는 개인의 책임이기 때문에 <br>  환불이 불가능한 점 양해 부탁드립니다.</p>
         </div>
     </article>
-
-
     <article>
         <div class="Q">
             <img src="images/Q.png" alt="Q">

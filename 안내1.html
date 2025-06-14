@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>공지사항 안내3</title>
+  <style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    a:link {
+    text-decoration: none;
+    }
+    a:visited{
+    text-decoration: none;
+    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+h1 {
+    text-align: center;
+  }
+.notice-header {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 70px;
+}
+.notice-header div {
+    padding: 0 15px;
+}
+.notice-header .title {
+    flex-grow: 1;
+}
+.notice-content {
+    padding: 20px 10px;
+    line-height: 1.7;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+ }
+button {
+    position: fixed;
+      padding: 8px 20px;
+      font-size: 14px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #000;
+    }
+button a{
+    text-decoration: none;
+    color: #000;
+}
+button:hover {
+    background-color: #eaeaea;
+    text-decoration: none;
+    color: #000;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+    <section>
+  <h1>공지사항</h1>
+  <div class="notice-header">
+    <div>1</div>
+    <div>안내</div>
+    <div class="title">[유료서비스] 해지 기능 안내</div>
+    <div>1732</div>
+    <div>2025.01.19</div>
+  </div>
+<br>
+  <div class="notice-content">
+안녕하세요, MusicStream입니다.<br>
+항상 저희 서비스를 이용해 주셔서 감사합니다.<br><br>
+
+고객님들의 편리한 서비스 이용을 위해, 해지(탈퇴) 기능에 대해 다음과 같이 안내드립니다.<br><br>
+
+
+해지 방법 안내<br><br>
+
+1. 오른쪽 상단 [마이페에지] 메뉴로 이동<br>
+2. 회원 탈퇴하기 버튼 클릭<br>
+3. 해지 사유 입력 및 확인 후, 절차에 따라 탈퇴 진행<br><br>
+
+ 유의 사항<br>
+∙ 해지(탈퇴) 시, 보유한 플레이리스트, 좋아요, 구매 내역 등은 모두 삭제되며 복구가 불가능합니다.<br>
+∙ 정기결제 서비스를 이용 중이신 경우, 해지와 동시에 결제도 자동 해지됩니다.<br>
+∙ 일부 콘텐츠 이용기록은 내부 정책 및 관련 법령에 따라 일정 기간 보관될 수 있습니다.<br><br>
+서비스 이용에 불편 없으시도록 더욱 노력하겠습니다.<br>
+감사합니다.<br><br>
+
+<strong>MusicStream 고객센터 드림</strong>
+  </div>
+<br>
+  <div class="button">
+    <button><a href="공지사항.html">목록</a></button>
+  </div>
+
+</body>
+</html>

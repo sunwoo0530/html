@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>최신 음악 플레이리스트</title>
+  <style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+a:link{
+  text-decoration: none;
+  color: gray;;
+}
+a:hover{
+  color: #000;
+  text-decoration: underline;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    h1, h3 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .chart-header {
+      font-size: 18px;
+      color: green;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      text-align: center;
+      padding: 25px;
+      border-bottom: 1px solid#ddd;
+    }
+    th {
+      background: #f9f9f9;
+      font-weight: bold;
+    }
+    .song-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+    }
+    .song-info img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .song-info .title {
+      font-weight: bold;
+    }
+    .play-icons {
+      font-size: 14px;
+      color: gray;
+    }
+    .like {
+      color: #999;
+    }
+.title a{
+  color: #000;
+}
+.title a:hover{
+  text-decoration: underline;
+  color: #000;
+}
+button {
+      padding: 8px 13px;
+      font-size: 14px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #000;
+      
+    }
+button a{
+    text-decoration: none;
+    color: #000;
+}
+button:hover{
+    background-color: #f9f9f9;
+}
+  </style>
+</head>
+<body>
+  </style>
+</head>
+<body>
+<div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+<section class="latest-music">
+  <h1>인기음악</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>순위</th>
+        <th>곡 정보</th>
+        <th>앨범</th>
+        <th>좋아요</th>
+        <th>듣기</th>
+        <th>담기</th>
+        <th>다운</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td class="song-info">
+          <img src="images/10cm.jpeg" alt="너에게 닿기를">
+          <div>
+            <div class="title"><a href="곡정보1.html">너에게 닿기를</a></div>
+            <div>10CM</div>
+          </div>
+        </td>
+        <td>너에게 닿기를</td>
+        <td class="like">101,765</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="song-info">
+          <img src="images/woodz.jpeg" alt="Drowning">
+          <div>
+            <div class="title"><a href="곡정보2.html">Drowning</a></div>
+            <div>WOODZ</div>
+          </div>
+        </td>
+        <td>OO-LI</td>
+        <td class="like">211,129</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="song-info">
+          <img src="images/아이유.jpeg" alt="Never Ending Story">
+          <div>
+            <div class="title"><a href="곡정보3.html">Never Ending Story</a></div>
+            <div>아이유</div>
+          </div>
+        </td>
+        <td>꽃갈피 셋</td>
+        <td class="like">51,306</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td class="song-info">
+          <img src="images/마크툽.jpg" alt="시작의 아이">
+          <div>
+            <div class="title"><a href="곡정보4.html">시작의 아이</a></div>
+            <div>마크툽 (MAKTUB)</div>
+          </div>
+        </td>
+        <td>시작의 아이</td>
+        <td class="like">35,668</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td class="song-info">
+          <img src="images/세븐틴.jpg" alt="THUNDER">
+          <div>
+            <div class="title"><a href="곡정보5.html">THUNDER</a></div>
+            <div>세븐틴</div>
+          </div>
+        </td>
+        <td>5th Album</td>
+        <td class="like">58,407</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+     <tr>
+        <td>6</td>
+        <td class="song-info">
+          <img src="images/제니.jpg" alt="like JENNIE">
+          <div>
+            <div class="title"><a href="곡정보6.html">like JENNIE</a></div>
+            <div>제니 (JENMNIE)</div>
+          </div>
+        </td>
+        <td>Ruby</td>
+        <td class="like">85,650</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+      <td>7</td>
+        <td class="song-info">
+          <img src="images/whiplash.jpg" alt="Whiplash">
+          <div>
+            <div class="title"><a href="곡정보7.html">Whiplash</a></div>
+            <div>aespa</div>
+          </div>
+        </td>
+        <td>The 5th Mini Album</td>
+        <td class="like">126,294</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+      <td>8</td>
+        <td class="song-info">
+          <img src="images/우디.jpg" alt="어제보다 슬픈 오늘">
+          <div>
+            <div class="title"><a href="곡정보8.html">어제보다 슬픈 오늘</a></div>
+            <div>우디 (Woody)</div>
+          </div>
+        </td>
+        <td>어제보다 슬픈 오늘</td>
+        <td class="like">33,332</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+      <td>9</td>
+        <td class="song-info">
+          <img src="images/나는반딧불.jpg" alt="나는 반딧불">
+          <div>
+            <div class="title"><a href="곡정보9.html">나는 반딧불</a></div>
+            <div>황가람</div>
+          </div>
+        </td>
+        <td>나는 반딧불</td>
+        <td class="like">145,889</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+      
+      <tr>
+      <td>10</td>
+        <td class="song-info">
+          <img src="images/bigbang.jpg" alt="HOME SWEET HOME">
+          <div>
+            <div class="title"><a href="곡정보10.html">HOME SWEET HOME</a></div>
+            <div>G=DRAGON</div>
+          </div>
+        </td>
+        <td>HOME SWEET HOME</td>
+        <td class="like">213,559</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+      <td>11</td>
+        <td class="song-info">
+          <img src="images/DAY6.jpg" alt="HAPPY">
+          <div>
+            <div class="title"><a href="곡정보11.html">HAPPY</a></div>
+            <div>DAY6 (데이식스)</div>
+          </div>
+        </td>
+        <td>Fourever</td>
+        <td class="like">193,378</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+      <td>12</td>
+        <td class="song-info">
+          <img src="images/ovan.jpg" alt="Flower">
+          <div>
+            <div class="title"><a href="곡정보12.html">Flower</a></div>
+            <div>오반(OVAN)</div>
+          </div>
+        </td>
+        <td>교회오빠</td>
+        <td class="like">53,304</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+      <td>13</td>
+        <td class="song-info">
+          <img src="images/BNT.jpg" alt="오늘만 I LOVE YOU">
+          <div>
+            <div class="title"><a href="곡정보13.html">오늘만 I LOVE YOU</a></div>
+            <div>BOYNEXTDOOR</div>
+          </div>
+        </td>
+        <td>오늘만 I LOVE YOU</td>
+        <td class="like">152,154</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <tr>
+      <td>14</td>
+        <td class="song-info">
+          <img src="images/이무진.jpg" alt="청춘만화">
+          <div>
+            <div class="title"><a href="곡정보14.html">청춘만화</a></div>
+            <div>이무진</div>
+          </div>
+        </td>
+        <td>만화 (滿花)</td>
+        <td class="like">65,292</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <td>15</td>
+        <td class="song-info">
+          <img src="images/IVE.jpg" alt="REBEL HEART">
+          <div>
+            <div class="title"><a href="곡정보15.html">REBEL HEART</a></div>
+            <div>IVE (아이브)</div>
+          </div>
+        </td>
+        <td>IVE EMPATHY</td>
+        <td class="like">102,578</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <td>16</td>
+        <td class="song-info">
+          <img src="images/APT.jpg" alt="APT.">
+          <div>
+            <div class="title"><a href="곡정보16.html">APT.</a></div>
+            <div>로제 (ROSÉ), Bruno Mars</div>
+          </div>
+        </td>
+        <td>APT.</td>
+        <td class="like">213,247</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <td>17</td>
+        <td class="song-info">
+          <img src="images/한페이지.jpg" alt="한 페이지가 될 수 있게">
+          <div>
+            <div class="title"><a href="곡정보17.html">한 페이지가 될 수 있게</a></div>
+            <div>DAY6 (데이식스)</div>
+          </div>
+        </td>
+        <td>The Book of Us : Gravity</td>
+        <td class="like">354,194</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <td>18</td>
+        <td class="song-info">
+          <img src="images/르세라핌.jpg" alt="HOT">
+          <div>
+            <div class="title"><a href="곡정보18.html">HOT</a></div>
+            <div>LE SSERAFIM (르세라핌)</div>
+          </div>
+        </td>
+        <td>HOT</td>
+        <td class="like">39,908</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <td>19</td>
+        <td class="song-info">
+          <img src="images/이클립스.jpg" alt="소나기">
+          <div>
+            <div class="title"><a href="곡정보19.html">소나기</a></div>
+            <div>이클립스 (ECLIPSE)</div>
+          </div>
+        </td>
+        <td>소나기</td>
+        <td class="like">182,3478</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+      <td>20</td>
+        <td class="song-info">
+          <img src="images/로이킴.jpg" alt="내게 사랑이 뭐냐고 물어본다면">
+          <div>
+            <div class="title"><a href="곡정보20.html">내게 사랑이 뭐냐고 물어본다면</a></div>
+            <div>로이킴</div>
+          </div>
+        </td>
+        <td>내게 사랑이 뭐냐고 물어본다면</td>
+        <td class="like">73,773</td>
+        <td><button>▶</button></td>
+        <td><button>＋</button></td>
+        <td><button>⤓</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</section>
+</body>
+</html>

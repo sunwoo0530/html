@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>곡정보2</title>
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    .album-container {
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+    .album-cover img {
+      width: 200px;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .album-info {
+      flex: 1;
+    }
+    .album-info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .album-info p {
+      margin: 4px 0;
+    }
+    .album-actions {
+      display: flex;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .tracklist {
+      margin-top: 30px;
+    }
+    .tracklist h3 {
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      text-align: center;
+      padding: 25px;
+      border-bottom: 1px solid#ddd;
+    }
+    th {
+      background: #f9f9f9;
+      font-weight: bold;
+    }
+    .like{
+      color: #999;
+    }
+    .album-description {
+      margin-top: 40px;
+    }
+    button {
+      padding: 8px 13px;
+      font-size: 14px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #000;
+    }
+    button a{
+    text-decoration: none;
+    color: #000;
+}
+button:hover{
+    background-color: #f9f9f9;
+}
+  </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+       <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+  <div class="album-container">
+    <div class="album-cover">
+      <img src="images/woodz.jpeg" alt="Drowning">
+    </div>
+    <div class="album-info">
+      <h2>OO-LI</h2>
+      <p><strong>아티스트:</strong> WOODZ</p>
+      <p><strong>발매일:</strong> 2023.04.26</p>
+      <p><strong>장르:</strong> 록/메탈, R&B/Soul</p>
+      <p><strong>좋아요:</strong> 💚 16,749</p>
+      <p><strong>평점:</strong> ⭐ 4.9 (1892명)</p>
+    </div>
+  </div>
+  <div class="tracklist">
+    <h3>수록곡 (7곡)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>곡명</th>
+          <th>아티스트</th>
+          <th>좋아요</th>
+          <th>듣기</th>
+          <th>담기</th>
+          <th>다운</th>
+        </tr>
+      </thead>
+      <tbody>
+         <tr>
+          <td>1</td>
+          <td>Deep Deep Deep</td>
+          <td>WOODZ</td>
+          <td class="like">7,499</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Journey</td>
+          <td>WOODZ</td>
+          <td class="like">32,876</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>Drowning</strong> (TITLE)</td>
+          <td>WOODZ</td>
+          <td class="like">211,155</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Busted</td>
+          <td>WOODZ</td>
+          <td class="like">10,465</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Who Knows</td>
+          <td>WOODZ</td>
+          <td class="like">6,603</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+          <tr>
+          <td>6.</td>
+          <td>Ready to Fight</td>
+          <td>WOODZ</td>
+          <td class="like">9,567</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>심연</td>
+          <td>WOODZ</td>
+          <td class="like">22,157</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="album-description">
+    <h3>앨범소개</h3><br>
+    <p> WOODZ 5th Mini Album [OO-LI]<br><br>
+ 
+던져진 자유, 방황하는 우리.<br>
+의도된 순수함에 가려진 의미는 우리가 찾던 것일까?<br><br>
+ 
+자유와 통제 그 어딘가를 방황하다<br>
+깊은 곳의 나를 찾아 마주했다.<br><br>
+ 
+그는 꽤나 나다운 웃음을 짓고 있었다.<br>
+슬그머니 밀려오는 따뜻한 마음을 머금고<br>
+다시 한 걸음을 뗐다.<br><br>
+ 
+저 멀리 또 다른 내가 지금의 나를 찾는 듯 두리번거리고 있다.<br>
+이전의 내가 그랬듯, 그에게 지금의 나다운 미소를 띠어 보낸다.<br>
+    </p>
+  </div>
+</section>
+</body>
+</html>

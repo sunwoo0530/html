@@ -4,6 +4,68 @@
   <meta charset="UTF-8">
   <title>최신 음악 플레이리스트</title>
   <style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
     body {
       margin: 0;
       padding: 30px;
@@ -11,12 +73,10 @@
       background-color: #f0f2f5;
       color: #333;
     }
-
     h1, h3 {
       text-align: center;
       margin-bottom: 30px;
     }
-
     .header {
       display: flex;
       justify-content: space-between;
@@ -24,13 +84,11 @@
       flex-wrap: wrap;
       margin-bottom: 30px;
     }
-
     .search-filter {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
-
     input[type="text"], select {
       padding: 10px 14px;
       border: 1px solid #ccc;
@@ -38,13 +96,11 @@
       font-size: 14px;
       background-color: white;
     }
-
     .tabs {
       display: flex;
       gap: 12px;
       margin-top: 10px;
     }
-
     .tab {
       padding: 8px 16px;
       border-radius: 20px;
@@ -52,19 +108,16 @@
       cursor: pointer;
       transition: 0.2s;
     }
-
     .tab:hover {
       background-color: #ff6f61;
       color: white;
     }
-
     .music-grid {
-      display: grid;
+      display:flex;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 20px;
       margin-bottom: 50px;
     }
-
     .music-card {
       background-color: white;
       border-radius: 12px;
@@ -74,7 +127,6 @@
       cursor: pointer;
       text-align: center;
     }
-
     .music-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
@@ -85,31 +137,26 @@
       height: 150px;
       object-fit: cover;
     }
-
     .music-card h4 {
       margin: 10px 0 4px;
       font-size: 16px;
     }
-
     .music-card p {
       margin: 0 0 10px;
       color: #666;
       font-size: 13px;
     }
-
     .circle-container {
       display: flex;
       justify-content: center;
       gap: 50px;
       margin: 30px 0 40px;
     }
-
     .circle-block {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-
     .circle {
       width: 100px;
       height: 100px;
@@ -122,18 +169,15 @@
       justify-content: center;
       transition: 0.3s;
     }
-
     .circle:hover {
       background-color: #3f51b5;
       color: white;
     }
-
     .label {
       margin-top: 8px;
       font-size: 14px;
       font-weight: bold;
     }
-
     .load-more {
       display: block;
       margin: 40px auto;
@@ -146,18 +190,15 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
-
     .load-more:hover {
       background-color: #1c253a;
     }
-
     ul.song-list {
       list-style: none;
       padding: 0;
       max-width: 600px;
       margin: 0 auto;
     }
-
     ul.song-list li {
       display: flex;
       justify-content: space-between;
@@ -169,26 +210,21 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       transition: background-color 0.3s;
     }
-
     ul.song-list li:hover {
       background-color: #f0f0f0;
     }
-
     .song-info {
       display: flex;
       flex-direction: column;
       text-align: left;
     }
-
     .song-title {
       font-weight: bold;
     }
-
     .song-artist {
       font-size: 13px;
       color: #666;
     }
-
     .play-btn {
       background-color: #ff6f61;
       color: white;
@@ -203,14 +239,27 @@
       justify-content: center;
       transition: background-color 0.3s;
     }
-
     .play-btn:hover {
       background-color: #e44c3a;
     }
   </style>
 </head>
 <body>
-
+<div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+<section class="latest-music">
   <h1>최신음악</h1>
 
   <div class="header">
@@ -227,7 +276,6 @@
         <option>Hip-Hop</option>
       </select>
     </div>
-
     <div class="tabs">
       <div class="tab">Popular</div>
       <div class="tab">Newest</div>
@@ -288,7 +336,6 @@
       <div class="label">추천음악</div>
     </div>
   </div>
-
   <ul class="song-list">
     <li>
       <div class="song-info">
@@ -312,8 +359,7 @@
       <button class="play-btn">▶</button>
     </li>
   </ul>
-
   <button class="load-more">LOAD MORE</button>
-
+</section>
 </body>
 </html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>곡정보17</title>
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    .album-container {
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+    .album-cover img {
+      width: 200px;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .album-info {
+      flex: 1;
+    }
+    .album-info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .album-info p {
+      margin: 4px 0;
+    }
+    .album-actions {
+      display: flex;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .tracklist {
+      margin-top: 30px;
+    }
+    .tracklist h3 {
+      margin-bottom: 10px;
+    }
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      text-align: center;
+      padding: 25px;
+      border-bottom: 1px solid#ddd;
+    }
+    th {
+      background: #f9f9f9;
+      font-weight: bold;
+    }
+    .like{
+      color: #999;
+    }
+    .album-description {
+      margin-top: 40px;
+    }
+    button {
+      padding: 8px 13px;
+      font-size: 14px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #000;
+    }
+    button a{
+    text-decoration: none;
+    color: #000;
+}
+button:hover{
+    background-color: #f9f9f9;
+}
+  </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+  <div class="album-container">
+    <div class="album-cover">
+      <img src="images/한페이지.jpg" alt="한 페이지가 될 수 있게">
+    </div>
+    <div class="album-info">
+      <h2>The Book of Us : Gravity</h2>
+      <p><strong>아티스트:</strong> DAY6 (데이식스)</p>
+      <p><strong>발매일:</strong> 2029.07.15</p>
+      <p><strong>장르:</strong> 댄스</p>
+      <p><strong>좋아요:</strong> 💚 26,503</p>
+      <p><strong>평점:</strong> ⭐ 4.9 (12,197명)</p>
+    </div>
+  </div>
+  <div class="tracklist">
+    <h3>수록곡(6)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>곡명</th>
+          <th>아티스트</th>
+          <th>좋아요</th>
+          <th>듣기</th>
+          <th>담기</th>
+          <th>다운</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>For me</td>
+          <td>DAY6 (데이식스)</td>
+          <td class="like">44,055</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>한 페이지가 될 수 있게</strong> (TITLE)</td>
+          <td>DAY6 (데이식스)</td>
+          <td class="like">354,2242</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>How to love</td>
+          <td>DAY6 (데이식스)</td>
+          <td class="like">41,265</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>돌아갈래요</td>
+          <td>DAY6 (데이식스)</td>
+          <td class="like">30,227</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>포장</td>
+          <td>DAY6 (데이식스)</td>
+          <td class="like">32,408</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Best Part</td>
+          <td>DAY6 (데이식스)</td>
+          <td class="like">49,726</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="album-description">
+    <h3>앨범소개</h3><br>
+    <p>
+   DAY6, 미니 5집 'The Book of Us : Gravity' & 타이틀곡 '한 페이지가 될 수 있게' 7월 15일 발매!<BR><br>
+ 
+- DAY6, '끌어당기는 매력' 지닌 새 미니앨범 'The Book of Us : Gravity'로 컴백! 이번에도 '전곡 작사, 작곡 참여' DAY6만의 '개성+색깔' UP<BR>
+- '모든 인연의 시작점' 노래한 타이틀곡 '한 페이지가 될 수 있게', 청량한 사운드로 덧입혀진 DAY6 감성송!!<BR>
+- 'K팝 대표 밴드' DAY6가 선물하는 올여름 추억의 한 페이지<BR><BR><BR>
+ 
+ 
+DAY6가 7월 15일 다섯 번째 미니 앨범 'The Book of Us : Gravity'와 타이틀곡 '한 페이지가 될 수 있게'를 발매하고 컴백한다.
+   </p>
+  </div>
+</section>
+</body>
+</html>

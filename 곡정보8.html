@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>곡정보8</title>
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    .album-container {
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+    .album-cover img {
+      width: 200px;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .album-info {
+      flex: 1;
+    }
+    .album-info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .album-info p {
+      margin: 4px 0;
+    }
+    .album-actions {
+      display: flex;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .tracklist {
+      margin-top: 30px;
+    }
+    .tracklist h3 {
+      margin-bottom: 10px;
+    }
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      text-align: center;
+      padding: 25px;
+      border-bottom: 1px solid#ddd;
+    }
+    th {
+      background: #f9f9f9;
+      font-weight: bold;
+    }
+    .like{
+      color: #999;
+    }
+    .album-description {
+      margin-top: 40px;
+    }
+    button {
+      padding: 8px 13px;
+      font-size: 14px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #000;
+    }
+    button a{
+    text-decoration: none;
+    color: #000;
+}
+button:hover{
+    background-color: #f9f9f9;
+}
+  </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+  <div class="album-container">
+    <div class="album-cover">
+      <img src="images/우디.jpg" alt="어제보다 슬픈 오늘">
+    </div>
+    <div class="album-info">
+      <h2>어제보다 슬픈 오늘</h2>
+      <p><strong>아티스트:</strong> 우디 (Woody)</p>
+      <p><strong>발매일:</strong> 2025.03.31</p>
+      <p><strong>장르:</strong> 발라드</p>
+      <p><strong>좋아요:</strong> 💚 1130</p>
+      <p><strong>평점:</strong> ⭐ 4.0 (108명)</p>
+    </div>
+  </div>
+  <div class="tracklist">
+    <h3>수록곡(2)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>곡명</th>
+          <th>아티스트</th>
+          <th>좋아요</th>
+          <th>듣기</th>
+          <th>담기</th>
+          <th>다운</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong>어제보다 슬픈 오늘</strong> (TITLE)</td>
+          <td>우디 (Woody)</td>
+          <td class="like">33,424</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+          <td>2</td>
+          <td>어제보다 슬픈 오늘 (Inst.)</td>
+          <td>우디 (Woody)</td>
+          <td class="like">34</td>
+          <td><button>▶</button></td>
+          <td><button>＋</button></td>
+          <td><button>↓</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="album-description">
+    <h3>앨범소개</h3><br>
+    <p>
+     우디(Woody)의 <어제보다 슬픈 오늘><br><br>
+
+서로 숨바꼭질하는 듯 끝을 향해가는 감정에<br>
+화가 나고 짜증이 나고 눈물도 났겠지만<br>
+그래도 누구는 발라드를 들으며<br>
+또 누구는 팝을, 또 누구는 또 다른 노래를 들으며<br>
+불안하고 지친 마음을 내려놓았다.<br><br>
+그 힘들었던 순간에<br>
+좋은 노래들이 곁에 있어서 참 다행이었다.
+   </p>
+  </div>
+</section>
+</body>
+</html>

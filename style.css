@@ -14,7 +14,6 @@ a:link {
 a:visited {
   text-decoration: none;
 }
-
 /* 레이아웃: 컨테이너, 사이드바, 메인 콘텐츠 */
 .container {
   display: flex;
@@ -43,6 +42,10 @@ a:visited {
   margin-bottom: 30px;
   padding-left: 20px;
 }
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
 .sidebar ul {
   list-style: none;
   width: 100%;
@@ -58,11 +61,11 @@ a:visited {
   background: #f0f4fa;
 }
 .sidebar a:link {
-  color: #333;
+  color: #4a60a1;
   text-decoration: none;
 }
 .sidebar a:visited {
-  color: #333;
+  color: #4a60a1;
   text-decoration: none;
 }
 .main-content {

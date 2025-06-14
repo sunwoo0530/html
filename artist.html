@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>가수 목록</title>
+  <style>
+    a:link{
+        text-decoration: none;
+        color: #444;
+    }
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 90;
+  overflow-y: auto;
+  height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #4a60a1;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.logo a{
+  text-decoration: none;
+  color: #4a60a1;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar li {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #f0f4fa;
+}
+.sidebar a:link {
+  color: #4a60a1;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #4a60a1;
+  text-decoration: none;
+}
+section{
+    margin: 0 0 0 400px;
+}
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    .artist-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .artist-card {
+      display: flex;
+      width: 48%;
+      background-color: #f0f2f5;
+      border-top: 2px solid #ddd;
+      border-bottom: 2px solid #ddd;
+      padding: 15px;
+      align-items: center;
+      gap: 15px;
+      
+    }
+   .artist-card img{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+   }
+    .artist-info {
+      flex: 1;
+    }
+    .artist-info h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    .artist-info p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+    .track-title {
+      color: #444;
+    }
+    .track-title a{
+        text-decoration: none;
+        color: #444;
+    }
+     .track-title a:hover{
+        text-decoration: underline;
+        color: #00cc66;
+    }
+    .favorite {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #888;
+    }
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+      gap: 8px;
+    }
+    .search-container label {
+      font-weight: bold;
+      font-size: 14px;
+      color: #000;
+    }
+    .search-container input[type="text"] {
+      padding: 5px 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+    .search-container button {
+      padding: 5px 12px;
+      font-size: 13px;
+      border: 1px solid #999;
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+    .search-container button:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+   <section>
+    <div class="container">
+    <!-- 사이드 메뉴 -->
+    <nav class="sidebar">
+      <div class="logo">
+       <a href="main.html">MusicStream</a>
+      </div>
+      <ul>
+        <a href="main.html"><li>홈</li></a>
+        <a href="최신음악플레이리스트.html"><li>최신음악</li></a>
+        <a href="인기음악.html"><li>인기음악</li></a>
+        <a href="artist.html"><li>가수</li></a>
+        <a href="musicvideo.html"><li>뮤직비디오</li></a>
+      </ul>
+    </nav>
+<h2>가수</h2>
+
+<form class="search-container">
+  <label for="search">가수 검색</label>
+  <input type="text" id="search" placeholder="검색어를 입력하세요">
+  <button type="submit">검색</button>
+</form><br>
+<div class="artist-list">
+  <div class="artist-card">
+   <img src="images/profile.10cm.jpg" alt="10CM">
+    <div class="artist-info">
+      <h3>10CM</h3>
+      <p>대한민국/남성/솔로<br>
+        댄스, R&B/Soul, 록/메탈</p><br>
+      <p class="track-title"><a href="곡정보1.html">▶ 너에게 닿기를</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+    <div class="artist-card">
+   <img src="images/profile.woodz.jpg" alt="WOODZ">
+    <div class="artist-info">
+      <h3>WOODZ</h3>
+      <p>대한민국/남성/솔로<br>
+        포크/블루스, 인디음악, 발라드</p><br>
+      <p class="track-title"><a href="곡정보2.html">▶ Drowning </a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+   <div class="artist-card">
+   <img src="images/profile.jennie.jpg" alt="JENNIE">
+    <div class="artist-info">
+      <h3>JENNIE</h3>
+      <p>대한민국/여성/솔로<BR>
+      댄스, 국외드라마, POP</p><br>
+      <p class="track-title"><a href="곡정보6.html">▶ like JENNIE</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+    </div>
+    <div class="artist-card">
+   <img src="images/profile.aespa.jpg" alt="aespa">
+    <div class="artist-info">
+      <h3>aespa</h3>
+      <p>대한민국/여성/그룹<br>
+      댄스, 일렉트로니카, R&B/Soul</p><br>
+      <p class="track-title"><a href="곡정보7.html">▶ Whiplash</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+  <div class="artist-card">
+   <img src="images/profile.maktub.jpg" alt="마크툽 (MAKTUB)">
+    <div class="artist-info">
+      <h3>마크툽 (MAKTUB)</h3>
+      <p>대한민국/남성/솔로<BR>
+      R&B/Soul, 인디음악, 발라드</p><br>
+      <p class="track-title"><a href="곡정보4.html">▶ 시작의 아이</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+    <div class="artist-card">
+   <img src="images/profile.iu.jpg" alt="아이유">
+    <div class="artist-info">
+      <h3>아이유</h3>
+      <p>대한민국/여성/솔로<br>
+    발라드, 댄스, 록/메탈</p><br>
+      <p class="track-title"><a href="곡정보3.html">▶ Never Ending Story</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+  <div class="artist-card">
+   <img src="images/profile.seventeen.jpg" alt="세븐틴">
+    <div class="artist-info">
+      <h3>세븐틴</h3>
+      <p>대한민국/여성/솔로<br>
+    발라드, 댄스, 록/메탈</p><br>
+      <p class="track-title"><a href="곡정보5.html">▶ THUNDER</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+  <div class="artist-card">
+   <img src="images/profile.gd.jpg" alt="G-DRAGON">
+    <div class="artist-info">
+      <h3>G-DRAGON</h3>
+      <p>대한민국/남성/솔로<br>
+    댄스, 랩/힙합, 발라드</p><br>
+      <p class="track-title"><a href="곡정보10.html">▶ TOO BAD</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+  <div class="artist-card">
+   <img src="images/profile.day6.jpg" alt="DAY6">
+    <div class="artist-info">
+      <h3>DAY6 (데이식스)</h3>
+      <p>대한민국/남성/그룹<br>
+     록/메탈, 댄스, 발라드</p><br>
+      <p class="track-title"><a href="곡정보11.html">▶ HAPPY</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+ <div class="artist-card">
+   <img src="images/profile.rose.jpg" alt="ROSE">
+    <div class="artist-info">
+      <h3>로제 (ROSÉ)</h3>
+      <p>대한민국/여성/솔로<br>
+      록/메탈, 발라드, R&B/Soul</p><br>
+      <p class="track-title"><a href="곡정보16.html">▶ APT.</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+  <div class="artist-card">
+   <img src="images/profile.이무진.jpg" alt="이무진">
+    <div class="artist-info">
+      <h3>이무진</h3>
+      <p>대한민국/남성/솔로<br>
+      발라드, 록/메탈, 국내드라마</p><br>
+      <p class="track-title"><a href="곡정보14.html">▶ 청춘만화</a></p>
+      <button>♡ 팔로우</button>
+      </div>
+     </div> 
+      <div class="artist-card">
+   <img src="images/profile.lesserafim.jpg" alt="LE SSERAFIM (르세라핌)">
+    <div class="artist-info">
+      <h3>LE SSERAFIM (르세라핌)</h3>
+      <p>대한민국/여성/솔로<br>
+      록/메탈, 발라드, R&B/Soul</p><br>
+      <p class="track-title"><a href="곡정보18.html">▶ HOT</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+  <div class="artist-card">
+   <img src="images/profile.황가람.jpg" alt="황가람">
+    <div class="artist-info">
+      <h3>황가람</h3>
+      <p>대한민국/남성/솔로<br>
+      발라드, 국내드라마, 애니메이션/웹툰</p><br>
+      <p class="track-title"><a href="곡정보9.html">▶ 나는 반딧불</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+  <div class="artist-card">
+   <img src="images/profile.ovan.jpg" alt="오반 (OVAN)">
+    <div class="artist-info">
+      <h3>오반 (OVAN)</h3>
+      <p>대한민국/남성/솔로<br>
+      랩/힙합, 인디음악, R&B/Soul</p><br>
+      <p class="track-title"><a href="곡정보12.html">▶ Flower</a></p>
+      <button>♡ 팔로우</button>
+    </div>
+  </div>
+</div>
+</section>
+</body>
+</html>
